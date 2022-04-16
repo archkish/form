@@ -1,0 +1,107 @@
+.registration {
+  @include main;
+  &__title {
+    text-align: center;
+  }
+  &__form {
+    @include style_form;
+    &-text {
+      margin-left: 10px;
+    }
+  }
+  &__child {
+    @include style_child;
+  }
+
+  &__button {
+    @include style_btn;
+  }
+
+  &__file {
+    &-foto {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+    }
+    &-icon {
+      width: 20px;
+    }
+    &-label {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border: 2px solid #150b22;
+      padding: 9px 0 9px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(228, 225, 225);
+      }
+      &-mr10 {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__togle {
+    &-text {
+      position: absolute;
+      left: 65px;
+      top: 17px;
+      font-size: 13px;
+    }
+
+    &_small {
+      margin-top: 15px;
+    }
+  }
+
+  &__togle[type="checkbox"] {
+    margin-top: 15px;
+    position: relative;
+    width: 50px;
+    height: 20px;
+    appearance: none;
+    background: rgb(214, 79, 79);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.5s;
+    cursor: pointer;
+
+    &:checked {
+      background: green;
+
+      &[type="checkbox"] {
+        &:before {
+          left: 30px;
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      top: 0;
+      left: 0;
+      background: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: left 0.5s;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+  }
+}
+
+.icon-folder-upload:before {
+  content: "\e934";
+  margin-right: 10px;
+}

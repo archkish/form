@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  background-color: rgba(162, 152, 157, 0.38);
+  min-height: 100vh;
+  display: flex;
+}
+@import "blocks/mixins";
+
+@import "blocks/main";
+@import "blocks/autorisation";
+@import "blocks/registration";
+@import "blocks/todo";
+@import "blocks/media";
+
