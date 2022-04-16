@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 0 auto;
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    &-link {
+      text-decoration: none;
+      display: block;
+      margin-left: 10px;
+      color: rgb(93, 92, 92);
+      font-family: "Roboto", sans-serif;
+      font-size: 26px;
+    }
+    &-icon {
+      font-size: 30px;
+    }
+  }
+}
